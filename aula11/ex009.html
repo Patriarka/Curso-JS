@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    <input type="text" name="txtnac" id="txtnac" placeholder="País em que reside">
+    <input type="button" value="Verificar" onClick="Verifica()">
+    <div id="res">
+       
+    </div>
+    <script>
+        function Verifica() {
+            var txtn = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res');
+            var pais = String(txtn.value)
+
+            res.innerHTML = `<p>Vivendo em <strong>${pais}</strong></p>`
+
+            if(pais == "Brasil") res.innerHTML += `Brasileiro`
+            else res.innerHTML += "<p>Estrangeiro</p>"
+        }
+    </script>
+</body>
+</html>
