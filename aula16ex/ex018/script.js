@@ -39,7 +39,7 @@ function adicionar()
     let num = Number(txtnum.value)
     console.log(vet)
 
-    if(txtnum.value.length == 0 || num > 100 || num < 0 || vet.indexOf(num) != -1) window.alert('Erro! Digite um número válido')
+    if(txtnum.value.length == 0 || num > 100 || num <= 0 || vet.indexOf(num) != -1) window.alert('Erro! Digite um número válido')
     else if(vet.length == 100) window.alert('Erro! Todos os números foram digitados')
     else {
         vet.push(num) 
